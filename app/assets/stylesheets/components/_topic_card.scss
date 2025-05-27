@@ -1,12 +1,20 @@
 .topic-card {
   background-color: rgb(225, 225, 225);
-  padding: 30px 30px 15px; /* Updated padding to include 15px bottom */
+  padding: 30px 30px 15px;
   border-radius: 8px;
   width: 100%;
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-
   border: 1px solid #ddd;
-  min-height: 200px;
+
+  // Allow the card to grow with content
+  min-height: 230px;
+  height: auto;
+  overflow: visible;
+
+  // Flex layout for vertical alignment
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-topic-card {
@@ -22,4 +30,19 @@
   position: absolute;
   bottom: 3px;
   right: 3px;
+}
+
+// Optional: Add these if you have text or buttons overflowing
+.topic-card p,
+.topic-card .btn,
+.topic-card .btn-small {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+// Optional: responsive grid support (if you use Bootstrap or similar)
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
