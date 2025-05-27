@@ -84,3 +84,5 @@ gem 'ostruct'
 gem 'pg_search'
 
 gem "ruby-openai"
+
+
